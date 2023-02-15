@@ -1,0 +1,55 @@
+
+.flex-grid {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.card-grid {
+    max-width: 100%;
+    box-sizing: border-box;
+   
+}
+
+.chart-wrap {
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+   
+}
+
+@media (min-width: 800px) {
+    .card-grid {
+        max-width: 100%;
+        box-sizing: border-box; 
+    }
+}
+
+.card-content {
+    position: relative;
+    height: 100%;
+}
+
+.card-statistics-icon {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    width: 42px; 
+    height: 42px;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: #fff;
+    background-color: var(--amplify-colors-brand-primary-60);
+    /*background-color: #406abf;*/
+    font-size: 22px;
+}
+.card-title {
+    font-size: 16px;
+}
+.card-statistics-amount {
+    font-size: 30px;
+}
+

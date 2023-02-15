@@ -1,0 +1,16 @@
+
+
+.footer {
+    padding: 30px;
+    padding-left: 290px;
+    text-align: right;
+    
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        padding: 30px;
+        padding-left: 20px;
+        text-align: center;
+    }
+}

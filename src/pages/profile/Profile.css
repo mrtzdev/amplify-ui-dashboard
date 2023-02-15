@@ -1,0 +1,35 @@
+
+.profile-header-image {
+width: 66px;
+height: 66px;
+font-size: 14px;
+border-radius: 50%;
+overflow: hidden;
+}
+
+.profile-header-image  img {
+width: 66px;
+height: 66px;
+}
+.profile-header-text {
+padding: 8px;
+}
+
+.profile-card-content .amplify-flex {
+margin-bottom: 10px;
+}
+
+.profile-card-content .amplify-switchfield {
+margin-bottom: 0;
+}
+
+.profile-card-content {
+position: relative;
+min-height: 200px;
+}
+
+.profile-card-edit {
+position: absolute;
+bottom: 0px; 
+right: 0px;
+}
