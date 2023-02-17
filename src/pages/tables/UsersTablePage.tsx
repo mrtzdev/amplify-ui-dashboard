@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Heading } from "@aws-amplify/ui-react";
+import { View, Heading, ScrollView } from "@aws-amplify/ui-react";
 import UsersTable from "./UsersTable";
 
 // const demoUsers = [{ name: "hello" }, { name: "hello" }];
@@ -158,7 +158,9 @@ const Tables = () => {
       >
         <Heading> User Table </Heading>
         <br></br>
-        <UsersTable users={dataUsers} />
+        <ScrollView width="100%">
+          <UsersTable users={dataUsers} />
+        </ScrollView>
       </View>
     </>
   );
