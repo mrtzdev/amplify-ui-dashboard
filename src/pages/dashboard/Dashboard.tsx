@@ -39,7 +39,7 @@ const barChartDataDemo = [
   },
 ];
 
-const getBarChartData = () =>
+const getChartData = () =>
   new Promise((resolve, reject) => {
     if (!barChartDataDemo) {
       return setTimeout(() => reject(new Error("no data")), 750);
@@ -54,13 +54,13 @@ const Dashboard = () => {
   const { tokens } = useTheme();
 
   useEffect(() => {
-    const doGetUsers = async () => {
-      const result = await getBarChartData();
+    const doChartData = async () => {
+      const result = await getChartData();
       setBarChartData(result);
       setTrafficSourceData([112332, 123221, 432334, 342334, 133432]);
     };
 
-    doGetUsers();
+    doChartData();
   }, []);
 
   return (
