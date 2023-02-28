@@ -4,7 +4,7 @@ import { Text, SwitchField } from "@aws-amplify/ui-react";
 const ProfileSettings = () => {
   return (
     <div className="profile-card-content">
-      <Text fontWeight="600" fontSize="18px" marginBottom="14px">
+      <Text fontWeight="600" fontSize="18px" marginBottom="18px">
         Profile Settings
       </Text>
 
@@ -21,12 +21,24 @@ const ProfileSettings = () => {
         labelPosition="end"
         defaultChecked={true}
       />
+      <SwitchField
+        isDisabled={false}
+        label="Item update notifications"
+        labelPosition="end"
+        defaultChecked={false}
+      />
+      <SwitchField
+        isDisabled={false}
+        label="Monthly product changes"
+        labelPosition="end"
+        defaultChecked={false}
+      />
 
       <SwitchField
         isDisabled={false}
         label="Subscribe to newsletter"
         labelPosition="end"
-        defaultChecked={false}
+        defaultChecked={true}
       />
     </div>
   );

@@ -15,18 +15,27 @@ height: 66px;
 padding: 8px;
 }
 
+hr.profile-divider {
+background: var(--amplify-colors-neutral-40);
+height: 1px;
+border: none;
+margin: 20px 0 25px;
+}
+
 .profile-card-content .amplify-flex {
 margin-bottom: 10px;
 }
 
 .profile-card-content .amplify-switchfield {
 margin-bottom: 0;
+display: block;
 }
 
 .profile-card-content {
 position: relative;
-min-height: 200px;
+min-height: 250px;
 }
+
 
 .profile-card-edit {
 position: absolute;
