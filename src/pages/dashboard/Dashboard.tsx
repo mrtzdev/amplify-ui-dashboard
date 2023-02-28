@@ -11,6 +11,7 @@ import { MdRemoveRedEye, MdWeb, MdPermIdentity } from "react-icons/md";
 
 import MiniStatistics from "./MiniStatistics";
 import TrafficSources from "./TrafficSources";
+import SalesSummary from "./SalesSummary";
 import "./Dashboard.css";
 
 import TrafficSummary from "./TrafficSummary";
@@ -36,6 +37,17 @@ const barChartDataDemo = [
       4, 9, 11, 7, 8, 3, 6, 5, 5, 4, 6, 4, 11, 10, 3, 6, 7, 5, 2, 8, 4, 9, 9, 2,
       6, 7, 5, 1, 8, 3, 12, 3, 4, 9, 7, 11, 10,
     ],
+  },
+];
+
+const lineChartData = [
+  {
+    name: "Mobile apps",
+    data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+  },
+  {
+    name: "Websites",
+    data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
   },
 ];
 
@@ -171,6 +183,44 @@ const Dashboard = () => {
                       "Other",
                     ]}
                   />
+                ) : (
+                  <Flex direction="column" minHeight="285px">
+                    <Placeholder size="small" />
+                    <Placeholder size="small" />
+                    <Placeholder size="small" />
+                    <Placeholder size="small" />
+                  </Flex>
+                )}
+              </div>
+            </Card>
+          </View>
+
+          <View columnSpan={[1, 1, 1, 2]} rowSpan={{ base: 3, large: 4 }}>
+            <Card borderRadius="15px">
+              <div className="card-title">Sales Summary</div>
+              <div className="chart-wrap">
+                {barChartData ? (
+                  <div className="row">
+                    <SalesSummary
+                      title="Sales Summary"
+                      data={lineChartData}
+                      type="line"
+                      labels={[
+                        "Jan",
+                        "Feb",
+                        "Mar",
+                        "Apr",
+                        "May",
+                        "Jun",
+                        "Jul",
+                        "Aug",
+                        "Sep",
+                        "Oct",
+                        "Nov",
+                        "Dec",
+                      ]}
+                    />
+                  </div>
                 ) : (
                   <Flex direction="column" minHeight="285px">
                     <Placeholder size="small" />
