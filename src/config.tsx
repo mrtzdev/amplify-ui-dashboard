@@ -12,7 +12,7 @@ export const baseConfig = {
   projectLink: "/", // GitHub link in the navbar
   docsRepositoryBase: "", // base URL for the docs repository
   titleSuffix: "",
-  search: false,
+  search: true,
   header: true,
   headerText: "Logo",
   footer: true,

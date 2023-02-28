@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 import Logo from "../Logo";
 import HeaderNav from "./HeaderNav";
+import HeaderSearchBar from "./HeaderSearchBar";
 
 const Header = () => {
   return (
@@ -27,6 +28,8 @@ const Header = () => {
         </div>
 
         <div className="header-right">
+          {baseConfig.search ? <HeaderSearchBar /> : <></>}
+
           <HeaderNav />
         </div>
       </Flex>

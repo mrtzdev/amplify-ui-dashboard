@@ -17,6 +17,7 @@ import CustomersSummary from "./CustomersSummary";
 
 import "./Dashboard.css";
 
+/// Mock Data
 const barChartDataDemo = [
   {
     name: "Web",
