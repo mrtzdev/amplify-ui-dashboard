@@ -12,9 +12,10 @@ import { MdRemoveRedEye, MdWeb, MdPermIdentity } from "react-icons/md";
 import MiniStatistics from "./MiniStatistics";
 import TrafficSources from "./TrafficSources";
 import SalesSummary from "./SalesSummary";
-import "./Dashboard.css";
-
 import TrafficSummary from "./TrafficSummary";
+import CustomersSummary from "./CustomersSummary";
+
+import "./Dashboard.css";
 
 const barChartDataDemo = [
   {
@@ -48,6 +49,13 @@ const lineChartData = [
   {
     name: "Websites",
     data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
+  },
+];
+
+const customersData = [
+  {
+    name: "New Customers",
+    data: [50, 60, 140, 190, 180, 230],
   },
 ];
 
@@ -219,6 +227,31 @@ const Dashboard = () => {
                         "Nov",
                         "Dec",
                       ]}
+                    />
+                  </div>
+                ) : (
+                  <Flex direction="column" minHeight="285px">
+                    <Placeholder size="small" />
+                    <Placeholder size="small" />
+                    <Placeholder size="small" />
+                    <Placeholder size="small" />
+                  </Flex>
+                )}
+              </div>
+            </Card>
+          </View>
+
+          <View rowSpan={{ base: 1, large: 4 }}>
+            <Card height="100%" borderRadius="15px">
+              <div className="card-title">New Customers</div>
+              <div className="chart-wrap">
+                {barChartData ? (
+                  <div className="row">
+                    <CustomersSummary
+                      title="CutomersSummary"
+                      data={customersData}
+                      type="line"
+                      labels={["Jan", "Feb", "Mar", "Apr", "May", "Jun"]}
                     />
                   </div>
                 ) : (
