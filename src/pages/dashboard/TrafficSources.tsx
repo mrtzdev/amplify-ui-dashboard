@@ -58,7 +58,7 @@ const TrafficSources = ({
     <>
       <Chart
         series={data}
-        type={type}
+        type={type as any}
         height={300}
         options={Object.assign({}, defaultOptions, options, { labels })}
       ></Chart>

@@ -87,7 +87,7 @@ const defaultOptions = {
 const BarChart = ({ data, type, labels, options }: BarChartProps) => (
   <Chart
     series={data}
-    type={type}
+    type={type as any}
     height={284}
     width="100%"
     options={Object.assign({}, defaultOptions, options, { labels })}
